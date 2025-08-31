@@ -1,0 +1,8 @@
+{
+  "repo_owner": "alejandro221996",
+  "repo_name": "DjangoAppointments",
+  "log_file_path": "logs/gym_management.log",
+  "monitor_interval": 60,
+  "max_errors_per_batch": 10,
+  "environment": "production"
+}
