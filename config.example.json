@@ -1,0 +1,49 @@
+{
+  "repo_owner": "your-github-username",
+  "repo_name": "your-repository-name",
+  "log_file_path": "logs/django_app.log",
+  "monitor_interval": 60,
+  "max_errors_per_batch": 10,
+  "environment": "production",
+  "notifications": {
+    "slack_webhook": "https://hooks.slack.com/services/YOUR/SLACK/WEBHOOK",
+    "email": "admin@yourcompany.com"
+  },
+  "error_patterns": {
+    "database_error": {
+      "enabled": true,
+      "severity": "high",
+      "auto_create_pr": true
+    },
+    "authentication_error": {
+      "enabled": true,
+      "severity": "medium",
+      "auto_create_pr": true
+    },
+    "validation_error": {
+      "enabled": true,
+      "severity": "medium",
+      "auto_create_pr": false
+    },
+    "server_error": {
+      "enabled": true,
+      "severity": "high",
+      "auto_create_pr": true
+    },
+    "performance_issue": {
+      "enabled": true,
+      "severity": "low",
+      "auto_create_pr": false
+    }
+  },
+  "github": {
+    "default_branch": "main",
+    "assignees": ["your-username"],
+    "reviewers": ["team-lead"],
+    "labels": {
+      "automated": true,
+      "bug": true,
+      "needs-review": true
+    }
+  }
+}

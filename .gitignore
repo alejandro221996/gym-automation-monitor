@@ -3,7 +3,12 @@
 logs/
 
 # Config with secrets
+config.json
 config.production.json
+.kiro/settings/mcp.json
+
+# Automation logs
+automation.log
 
 # Python
 __pycache__/
